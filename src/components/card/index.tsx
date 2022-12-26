@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import CardBody from './card-body'
+import CardFooter from './card-footer'
 import styles from './styles.module.scss'
 
 const data = {
@@ -29,7 +30,7 @@ const Card = () => {
 				priority
 			/>
 			<CardBody {...data} />
-			<div>card footer</div>
+			<CardFooter productId={data.id} />
 		</div>
 	)
 }

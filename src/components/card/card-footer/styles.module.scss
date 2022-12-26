@@ -1,0 +1,8 @@
+@import '/src/styles/vars';
+@import '/src/styles/temp';
+
+.cardFooter {
+  @extend %flex;
+  @extend %justify-between;
+  margin-top: 13px;
+}
