@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Card from '~components/card'
 
 export default function Home() {
 	return (
@@ -14,7 +15,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<section>
-        {/* TODO/ add future page! */}
+        <Card />
       </section>
 		</>
 	)
