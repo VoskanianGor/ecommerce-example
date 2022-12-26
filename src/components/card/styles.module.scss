@@ -1,4 +1,18 @@
+@import '/src/styles/vars';
+@import '/src/styles/temp';
 
 .card {
-  
+  @extend %flex;
+  @extend %flex-col;
+	padding: 30px;
+	background: $c-white;
+	border: 1px solid $c-gray;
+  max-width: 332px;
+}
+
+.image {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  align-self: center;
+  margin-bottom: 12px;
 }

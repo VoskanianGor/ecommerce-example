@@ -8,9 +8,7 @@ import styles from './styles.module.scss'
 const Rating: FC<IRating> = ({ rate, count }) => {
 	return (
 		<div className={styles.rating}>
-			<div className={styles.stars}>
-        <Stars />
-      </div>
+			<Stars rate={rate} />
 			{/* TODO: redirect to reviews page or open review modal */}
 			<Link href={''} className={styles.reviews}>
 				{`${count} ${getNoun(count, ['отзыв', 'отзыва', 'отзывов'])}`}

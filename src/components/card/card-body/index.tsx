@@ -15,13 +15,14 @@ const CardBody: FC<ICard> = ({
 }) => {
 	return (
 		<div className={styles.body} title={description}>
-			<div className={styles.category}>{category}</div>
-			<div className={styles.rating}>
+			<div className={styles.categoryWrapper}>
+				<h5 className={styles.category}>{category}</h5>
 				<Rating {...rating} />
 			</div>
 			<h2 className={styles.title}>{title}</h2>
 			<p className={styles.price}>
-				{getPriceInRub(price, EXCHANGE_RATE)} <span className={styles.items}>/шт.</span>
+				{getPriceInRub(price, EXCHANGE_RATE)}{' '}
+				<span className={styles.items}>/шт.</span>
 			</p>
 			<h6 className="hidden">{description}</h6>
 		</div>

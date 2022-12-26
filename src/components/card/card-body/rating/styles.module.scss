@@ -4,6 +4,7 @@
 .rating {
   @extend %flex;
   @extend %items-center;
+  gap: 4px;
 }
 
 .reviews {
@@ -11,5 +12,10 @@
 	line-height: 14px;
 	text-align: right;
 	text-decoration-line: underline;
-	color: #999999;
+	color: $c-grey-300;
+  transition: $transition-colors;
+
+  &:hover {
+    color: $c-black;
+  }
 }

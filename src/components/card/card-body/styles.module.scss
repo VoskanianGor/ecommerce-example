@@ -1,9 +1,17 @@
 @import '/src/styles/vars';
+@import '/src/styles/temp';
 
 .body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.categoryWrapper {
+  @extend %flex;
+  @extend %justify-between;
+  @extend %items-center;
+  gap: 4px;
 }
 
 .category {
