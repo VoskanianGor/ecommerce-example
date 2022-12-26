@@ -29,12 +29,12 @@
 		width: 175px;
 
 		&:hover {
-			background: darken($color: $c-green, $amount: 5);
+			background: darken($c-green, 5);
 		}
 	}
 
 	&:hover {
-		background: darken($color: $c-blue, $amount: 5);
+		background: darken($c-blue, 5);
 	}
 }
 
@@ -45,7 +45,7 @@
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 20px;
-  color: $c-black;
+	color: $c-black;
 	gap: 11px;
 	position: absolute;
 	top: 50%;

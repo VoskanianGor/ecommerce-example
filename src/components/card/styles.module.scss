@@ -4,10 +4,17 @@
 .card {
   @extend %flex;
   @extend %flex-col;
+  @extend %justify-between;
+  position: relative;
 	padding: 30px;
 	background: $c-white;
 	border: 1px solid $c-gray;
-  max-width: 332px;
+  width: 100%;
+  transition: $transition-all;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  }
 }
 
 .image {

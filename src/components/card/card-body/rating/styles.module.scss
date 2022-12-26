@@ -5,6 +5,10 @@
   @extend %flex;
   @extend %items-center;
   gap: 4px;
+
+  @media (max-width: 475px) {
+    flex-direction: column;
+  }
 }
 
 .reviews {

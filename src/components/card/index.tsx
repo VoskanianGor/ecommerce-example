@@ -1,36 +1,20 @@
-import Image from 'next/image'
+import type { FC } from 'react'
+import type IProduct from '~interfaces/i-product'
 import CardBody from './card-body'
 import CardFooter from './card-footer'
+import CardPreview from './card-preview'
 import styles from './styles.module.scss'
 
-const data = {
-	id: 1,
-	title:
-		'Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED',
-	price: 109.95,
-	description:
-		'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
-	category: "men's clothing",
-	image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-	rating: {
-		rate: 3.9,
-		count: 1,
-	},
-}
-
-const Card = () => {
+const Card: FC<IProduct> = props => {
 	return (
-		<div className={styles.card} title="sdfsdfsdfsd">
-			<Image
-        className={styles.image}
-				src={data.image}
-				alt={data.title}
-				width={220}
-				height={220}
-				priority
+		<div className={styles.card} title={props.description}>
+			<CardPreview
+				src={props.image}
+				alt={props.title}
+				ratingCount={props.rating.count}
 			/>
-			<CardBody {...data} />
-			<CardFooter productId={data.id} />
+			<CardBody {...props} />
+			<CardFooter productId={props.id} />
 		</div>
 	)
 }

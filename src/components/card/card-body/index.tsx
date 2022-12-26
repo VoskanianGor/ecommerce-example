@@ -1,12 +1,12 @@
 import type { FC } from 'react'
-import type ICard from 'src/interfaces/i-card'
+import type IProduct from '~interfaces/i-product'
 import getPriceInRub from '~utils/get-price-in-rub'
 import Rating from './rating'
 import styles from './styles.module.scss'
 
 const EXCHANGE_RATE = 70
 
-const CardBody: FC<ICard> = ({
+const CardBody: FC<IProduct> = ({
 	category,
 	price,
 	rating,
@@ -17,7 +17,7 @@ const CardBody: FC<ICard> = ({
 		<div className={styles.body} title={description}>
 			<div className={styles.categoryWrapper}>
 				<h5 className={styles.category}>{category}</h5>
-				<Rating {...rating} />
+				{rating && <Rating {...rating} />}
 			</div>
 			<h2 className={styles.title}>{title}</h2>
 			<p className={styles.price}>

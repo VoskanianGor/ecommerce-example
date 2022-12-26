@@ -53,3 +53,8 @@ svg {
   visibility: hidden;
   max-height: 0;
 }
+
+.container {
+  margin-inline: auto;
+  width: min(100% - 32px, clamp(320px, 95.2vw, 1780px));
+}

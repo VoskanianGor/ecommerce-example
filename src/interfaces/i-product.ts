@@ -1,6 +1,6 @@
 import type IRating from './i-rating'
 
-interface ICard {
+interface IProduct {
 	id: number
 	title: string
 	price: number
@@ -10,4 +10,4 @@ interface ICard {
 	rating: IRating
 }
 
-export default ICard
+export default IProduct
