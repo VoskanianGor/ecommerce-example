@@ -22,3 +22,9 @@
   @extend %flex;
   flex-direction: column;
 }
+
+%flex-center {
+  @extend %flex;
+  @extend %items-center;
+  @extend %justify-center;
+}
