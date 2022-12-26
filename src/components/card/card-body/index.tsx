@@ -7,13 +7,15 @@ const CardBody: FC<ICard> = ({
 	price,
 	rating,
 	title,
+	description,
 }) => {
 	return (
-		<div className={styles.body}>
-			<div className={styles.category}>{type}</div>
+		<div className={styles.body} title={description}>
+			<div className={styles.category}>{category}</div>
 			<div className={styles.rating}>{rating}</div>
 			<div className={styles.title}>{title}</div>
 			<div className={styles.price}>{price}</div>
+			<h6 className="hidden">{description}</h6>
 		</div>
 	)
 }

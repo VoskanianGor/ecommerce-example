@@ -4,7 +4,7 @@ const Card = () => {
 
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} title='sdfsdfsdfsd'>
       <div>
         card image
       </div>

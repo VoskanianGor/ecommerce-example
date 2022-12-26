@@ -24,3 +24,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.hidden {
+  visibility: hidden;
+  max-height: 0;
+}
