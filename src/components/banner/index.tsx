@@ -24,7 +24,13 @@ const Banner: FCC<IBanner> = ({
 }) => {
 	return (
 		<div className={classNames(styles.banner, styles[intent])}>
-			<Image className={styles.image} src={image} alt={title} />
+			<Image
+				className={styles.image}
+				src={image}
+				alt={title}
+				priority
+				placeholder="blur"
+			/>
 			<div className={styles.content}>
 				<DiscountBadge amount={discount} className={styles.badge} />
 				<h3 className={styles.title}>{children}</h3>
