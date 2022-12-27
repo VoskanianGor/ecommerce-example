@@ -6,6 +6,7 @@ import { getLocal, setLocal } from '~utils/local-storage'
 interface ICartStore {
 	cart: ICart
 	totalPrice: number
+	count: number
 	addToCart: (product: ICartProduct) => void
 	removeFromCart: (id: number) => void
 	clearCart: () => void
@@ -40,6 +41,14 @@ const cartStore = proxy<ICartStore>({
 			) || 0
 
 		return Math.round(total * EXCHANGE_RATE) as number
+	},
+	get count() {
+		const count = this.cart.products?.reduce(
+			(total: number, item: ICartProduct) => total + item.quantity,
+			0
+		)
+
+		return count || 0
 	},
 })
 

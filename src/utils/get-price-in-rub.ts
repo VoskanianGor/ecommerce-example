@@ -1,4 +1,4 @@
-const getPriceInRub = (price: number, exchangeRate: number) => {
+const getPriceInRub = (price: number, exchangeRate: number = 1) => {
   return new Intl.NumberFormat('ru-RU', {
     style: 'currency',
     currency: 'RUB',
