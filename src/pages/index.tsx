@@ -2,6 +2,8 @@ import classNames from 'classnames'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import BannerCard from '~components/banner-card'
+import Cart from '~components/cart'
+import Favorite from '~components/favorite'
 import ProductCards from '~components/product-cards'
 import IProduct from '~interfaces/i-product'
 import bannerData from './banner-data'
@@ -35,6 +37,8 @@ const Home: NextPage<IHome> = ({ products }) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<section className={classNames('container', styles.section)}>
+				<Cart />
+				<Favorite />
 				<div className={styles.cards}>
 					<BannerCard
 						bannerData={bannerData}
