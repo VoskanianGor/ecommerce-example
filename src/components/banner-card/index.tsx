@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { IBanner } from 'src/pages/banner-data'
+import type { IBanner } from '~constants/banner-data'
 import ArrowIcon from '~assets/icons/arrow.svg'
 import Banner from '~components/banner'
 import styles from './styles.module.scss'

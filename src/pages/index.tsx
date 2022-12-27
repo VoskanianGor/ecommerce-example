@@ -6,7 +6,7 @@ import Cart from '~components/cart'
 import Favorite from '~components/favorite'
 import ProductCards from '~components/product-cards'
 import IProduct from '~interfaces/i-product'
-import bannerData from './banner-data'
+import bannerData from '../constants/banner-data'
 import styles from './styles.module.scss'
 
 interface IHome {
