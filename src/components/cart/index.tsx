@@ -1,11 +1,9 @@
 import classNames from 'classnames'
-import Image from 'next/image'
 import { useState } from 'react'
 import CartIcon from '~assets/icons/cart.svg'
-import { EXCHANGE_RATE } from '~constants/index'
 import useCartStore from '~store/cart.store'
 import getPriceInRub from '~utils/get-price-in-rub'
-import ProductItem from './product-item'
+import ProductItem from '../product-item'
 import styles from './styles.module.scss'
 
 const Cart = () => {
@@ -28,7 +26,6 @@ const Cart = () => {
 			{!open && <CartIcon className={styles.icon} />}
 			{open && (
 				<div>
-					<h2>Корзина</h2>
 					{cart.products?.map(product => (
 						<ProductItem key={product.id} product={product} />
 					))}

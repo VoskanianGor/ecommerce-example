@@ -5,7 +5,7 @@
 	@extend %flex-col;
 	@extend %justify-between;
 	position: fixed;
-	bottom: 5%;
+	bottom: 15%;
 	right: 1%;
 	width: 70px;
 	height: 70px;
@@ -14,35 +14,13 @@
 	background: $c-white;
 	box-shadow: $shadow-cart;
 	transition: $transition-all;
-	z-index: 200;
+	z-index: 100;
 	cursor: pointer;
 
 	&.open {
 		width: 30vw;
 		height: 60vh;
 		border-radius: 15px;
-	}
-
-	&.hasItems::after {
-		display: block;
-	}
-
-	&::after {
-		display: none;
-		content: attr(data-count);
-		position: absolute;
-		top: -5px;
-		right: -5px;
-		padding: 5px;
-		width: 20px;
-		aspect-ratio: 1 / 1;
-		border-radius: 50%;
-		background: $c-red;
-		color: $c-white;
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 20px;
-		text-align: center;
 	}
 }
 

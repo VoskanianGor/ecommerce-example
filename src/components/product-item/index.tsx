@@ -1,25 +1,27 @@
 import Image from 'next/image'
 import type { FC } from 'react'
 import { EXCHANGE_RATE } from '~constants/index'
-import { ICartProduct } from '~interfaces/i-cart'
+import type { ICartProduct } from '~interfaces/i-cart'
 import getPriceInRub from '~utils/get-price-in-rub'
 import styles from './styles.module.scss'
 
 interface IProductItem {
-	product: ICartProduct
+	product: Omit<ICartProduct, 'quantity'>
 }
 
 const ProductItem: FC<IProductItem> = ({ product }) => {
-	const { title, image, price, quantity } = product
+	const { title, image, price, quantity } = product as ICartProduct
 
 	return (
 		<div className={styles.product}>
 			<div className={styles.content}>
 				<h2>{title}</h2>
-				<div className={styles.price}>
-					<strong>{getPriceInRub(price, EXCHANGE_RATE)}</strong>
-					<p>кол-во: {quantity}</p>
-				</div>
+				{quantity && (
+					<div className={styles.price}>
+						<strong>{getPriceInRub(price, EXCHANGE_RATE)}</strong>
+						<p>кол-во: {quantity}</p>
+					</div>
+				)}
 			</div>
 			<Image
 				className={styles.image}
