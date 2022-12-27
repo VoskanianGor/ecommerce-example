@@ -1,0 +1,21 @@
+//colors
+$c-black: #2E2E33;
+$c-white: #FFFFFF;
+$c-grey: #F5F5F7;
+$c-grey-300: #999999;
+$c-grey-600: #636B7F;
+$c-red: #FF0000;
+$c-green: #00B177;
+$c-blue: #4056A1;
+
+//background colors
+$bgc-discount: #FFDC38;
+$bgc-badge: #D9362B;
+$bgc-star: #F26A61;
+
+//transitions
+$transition-all: all 0.3s ease-in-out;
+$transition-colors: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+
+//shadows
+$shadow-cart: rgba(0, 0, 0, 0.4) 0px 30px 90px;;

@@ -1,0 +1,51 @@
+@import '/src/styles/vars';
+@import '/src/styles/temp';
+
+.button {
+	position: relative;
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 13px;
+  isolation: isolate;
+  transition: $transition-all;
+
+  &:hover {
+    opacity: 0.7;
+    .circle {
+      opacity: 0.7;
+    }
+  }
+}
+
+.circle {
+	position: absolute;
+	top: 50%;
+	right: -14px;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid;
+  transition: $transition-all;
+  z-index: -1;
+}
+
+.light {
+	&.button {
+		color: rgba($c-white, 0.8);
+	}
+
+	.circle {
+		border-color: rgba($c-white, 0.1);
+	}
+}
+
+.dark {
+	&.button {
+		color: rgba($c-black, 0.5);
+	}
+
+	.circle {
+		border-color: $c-white;
+	}
+}

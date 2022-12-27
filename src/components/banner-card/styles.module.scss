@@ -1,0 +1,26 @@
+@import '/src/styles/vars';
+@import '/src/styles/temp';
+
+.bannerCard {
+	@extend %flex;
+	@extend %flex-col;
+	@extend %justify-center;
+	position: relative;
+	background: $c-white;
+	width: 100%;
+	transition: $transition-all;
+}
+
+.title {
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 33px;
+	color: $c-black;
+	max-width: 275px;
+}
+
+.icon {
+	width: 40px;
+	height: 16px;
+	margin: 20px 0 34px;
+}

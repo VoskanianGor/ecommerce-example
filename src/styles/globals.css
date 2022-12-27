@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-weight: 400;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+a,
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(100% - 32px, clamp(320px, 95.2vw, 1780px));
+}

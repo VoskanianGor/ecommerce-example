@@ -1,0 +1,15 @@
+@import '/src/styles/temp';
+
+.preview {
+  @extend %flex-center;
+  position: relative;
+  align-self: center;
+  width: 100%;
+}
+
+.image {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin-bottom: 12px;
+  cursor: pointer;
+}

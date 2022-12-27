@@ -1,0 +1,56 @@
+@import '/src/styles/vars';
+@import '/src/styles/temp';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.categoryWrapper {
+  @extend %flex;
+  @extend %justify-between;
+  @extend %items-center;
+  gap: 4px;
+}
+
+.category {
+	font-size: 12px;
+	line-height: 20px;
+	color: $c-grey-300;
+}
+
+.title {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	color: $c-black;
+	max-width: 273px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	line-clamp: 3;
+	box-orient: vertical;
+  margin: 3px 0 7px;
+	transition: $transition-colors;
+
+	&:hover {
+		color: lighten($c-blue, 15);
+	}
+}
+
+.price {
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 20px;
+	color: $c-black;
+
+	.items {
+    font-weight: 500;
+		font-size: 11px;
+		line-height: 20px;
+		color: $c-grey-300;
+	}
+}

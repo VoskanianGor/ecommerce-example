@@ -1,0 +1,77 @@
+@import '/src/styles/vars';
+@import '/src/styles/temp';
+
+.image {
+	height: 100%;
+	object-fit: cover;
+}
+
+.banner {
+	@extend %flex;
+	width: 100%;
+	height: 140px;
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.content {
+	position: relative;
+	padding: 23px 25px;
+}
+
+.title {
+	font-size: 15px;
+	line-height: 22px;
+	text-overflow: ellipsis;
+	margin-bottom: 10px;
+	white-space: pre-line;
+}
+
+.dark {
+	&.banner {
+		background-color: $c-grey-600;
+		color: $c-white;
+	}
+
+	.image {
+		width: 50%;
+	}
+
+	.title {
+		max-width: 95px;
+	}
+
+	.badge {
+		transform: translateX(-14px);
+	}
+}
+
+.light {
+	&.banner {
+		background-color: $c-grey;
+		flex-direction: row-reverse;
+    justify-content: space-between;
+	}
+
+	.image {
+		width: 55.7%;
+	}
+
+	.title {
+		max-width: 118px;
+	}
+
+	.badge {
+		position: absolute;
+		top: unset;
+		right: unset;
+		left: 0;
+		transform: translateX(100%);
+	}
+
+	.content {
+		padding: 23px 0 19px 23px;
+	}
+}

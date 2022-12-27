@@ -1,0 +1,74 @@
+@import '/src/styles/vars';
+@import '/src/styles/temp';
+
+.buttonWrapper {
+	position: relative;
+	height: 40px;
+	width: 175px;
+	isolation: isolate;
+	border-radius: 90px;
+	background: $c-grey;
+}
+
+.button {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 20px;
+	text-align: center;
+	color: $c-white;
+	background: $c-blue;
+	padding: 10px 20px;
+	border-radius: 90px;
+	transition: $transition-all;
+	border: none;
+	width: 100px;
+	max-height: 100%;
+	white-space: nowrap;
+
+	&.inCart {
+		background: $c-green;
+		width: 175px;
+
+		&:hover {
+			background: darken($c-green, 5);
+		}
+	}
+
+	&:hover {
+		background: darken($c-blue, 5);
+	}
+}
+
+.control {
+	@extend %flex;
+	@extend %items-center;
+	@extend %justify-end;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 20px;
+	color: $c-black;
+	gap: 11px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	width: 50%;
+	height: 100%;
+	padding-right: 15px;
+	transition: $transition-colors;
+	z-index: -1;
+}
+
+.controlElement {
+	@extend %flex-center;
+	width: 10px;
+	height: 10px;
+
+	& > * {
+		cursor: pointer;
+	}
+
+	&:hover svg > * {
+		opacity: 0.7;
+	}
+}
