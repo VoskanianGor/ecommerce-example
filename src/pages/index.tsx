@@ -13,7 +13,10 @@ interface IHome {
 	products: IProduct[]
 }
 
-export async function getServerSideProps() {
+
+// This function gets called at build time because this data is static
+// But for dynamic data, i would use getServerSideProps
+export async function getStaticProps() {
 	const res = await fetch('https://fakestoreapi.com/products')
 	const products = (await res.json()) as IProduct[]
 
