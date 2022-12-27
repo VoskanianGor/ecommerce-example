@@ -1,7 +1,7 @@
 import ButtonToCart from './button-to-cart'
-import FavoriteIcon from '~assets/icons/favorite.svg'
 import styles from './styles.module.scss'
 import ButtonToFavorite from './button-to-favorite'
+
 interface ICardFooter {
 
 }

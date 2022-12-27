@@ -20,7 +20,9 @@ const CardBody: FC<IProduct> = ({
 				<h5 className={styles.category}>{category}</h5>
 				{rating && <Rating {...rating} />}
 			</div>
-			<h2 className={styles.title}>{title}</h2>
+			<Link href="">
+				<h2 className={styles.title}>{title}</h2>
+			</Link>
 			<p className={styles.price}>
 				{getPriceInRub(price, EXCHANGE_RATE)}{' '}
 				<span className={styles.items}>/шт.</span>
