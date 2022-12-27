@@ -34,6 +34,11 @@
 	line-clamp: 3;
 	box-orient: vertical;
   margin: 3px 0 7px;
+	transition: $transition-colors;
+
+	&:hover {
+		color: lighten($c-blue, 15);
+	}
 }
 
 .price {

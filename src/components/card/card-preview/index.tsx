@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import type { FC } from 'react'
 import BestsellerBadge from '~components/badges/bestseller'
 import styles from './styles.module.scss'
@@ -6,7 +7,7 @@ import styles from './styles.module.scss'
 interface ICardPreview {
 	src: string
 	alt: string
-  ratingCount: number
+	ratingCount: number
 }
 
 const RATING_COUNT_THRESHOLD = 300

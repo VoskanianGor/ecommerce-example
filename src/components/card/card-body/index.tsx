@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { FC } from 'react'
 import type IProduct from '~interfaces/i-product'
 import getPriceInRub from '~utils/get-price-in-rub'
