@@ -14,7 +14,7 @@ const Card: FC<IProduct> = props => {
 				ratingCount={props.rating.count}
 			/>
 			<CardBody {...props} />
-			<CardFooter productId={props.id} />
+			<CardFooter product={props} />
 		</div>
 	)
 }

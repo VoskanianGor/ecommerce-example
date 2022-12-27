@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "~assets/*": ["./public/assets/*"],
+      "~constants/*": ["./src/constants/*"],
       "~components/*": ["./src/components/*"],
       "~store/*": ["./src/store/*"],
       "~interfaces/*": ["./src/interfaces/*"],

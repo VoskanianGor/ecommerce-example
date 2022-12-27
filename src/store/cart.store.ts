@@ -1,11 +1,12 @@
 import { proxy, subscribe, useSnapshot } from 'valtio'
-import type ICart from '~interfaces/i-cart'
-import type IProduct from '~interfaces/i-product'
-import { getLocal, removeLocal, setLocal } from '~utils/local-storage'
+import { EXCHANGE_RATE } from '~constants/index'
+import type { ICart, ICartProduct } from '~interfaces/i-cart'
+import { getLocal, setLocal } from '~utils/local-storage'
 
 interface ICartStore {
 	cart: ICart
-	addToCart: (product: IProduct) => void
+	totalPrice: number
+	addToCart: (product: ICartProduct) => void
 	removeFromCart: (id: number) => void
 	clearCart: () => void
 }
@@ -21,7 +22,7 @@ const initialCart = getLocal<ICart>(CART_LOCAL_KEY) || {
 
 const cartStore = proxy<ICartStore>({
 	cart: initialCart,
-	addToCart: (product: IProduct) => {
+	addToCart: (product: ICartProduct) => {
 		cartStore.cart.products?.push(product)
 	},
 	removeFromCart: (id: number) => {
@@ -29,7 +30,16 @@ const cartStore = proxy<ICartStore>({
 	},
 	clearCart: () => {
 		cartStore.cart.products = []
-		removeLocal(CART_LOCAL_KEY)
+	},
+	get totalPrice() {
+		const total =
+			this.cart.products?.reduce(
+				(total: number, item: ICartProduct) =>
+					total + item.price * item.quantity,
+				0
+			) || 0
+
+		return Math.round(total * EXCHANGE_RATE) as number
 	},
 })
 

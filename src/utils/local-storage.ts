@@ -1,17 +1,19 @@
 const getLocal = <T>(key: string): T | null => {
-  const value = localStorage.getItem(key);
+	if (typeof window === 'undefined') return null
 
-  return value ? JSON.parse(value) : null;
-};
+	const value = localStorage.getItem(key)
+
+	return value ? JSON.parse(value) : null
+}
 
 const setLocal = <T>(key: string, value: T) => {
-  const res = JSON.stringify(value);
+	const res = JSON.stringify(value)
 
-  localStorage.setItem(key, res);
-};
+	localStorage.setItem(key, res)
+}
 
 const removeLocal = (key: string) => {
-  localStorage.removeItem(key);
-};
+	localStorage.removeItem(key)
+}
 
-export { getLocal, setLocal, removeLocal };
+export { getLocal, setLocal, removeLocal }

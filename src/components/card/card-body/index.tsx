@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import type { FC } from 'react'
+import { EXCHANGE_RATE } from '~constants/index'
 import type IProduct from '~interfaces/i-product'
 import getPriceInRub from '~utils/get-price-in-rub'
 import Rating from './rating'
 import styles from './styles.module.scss'
-
-const EXCHANGE_RATE = 70
 
 const CardBody: FC<IProduct> = ({
 	category,

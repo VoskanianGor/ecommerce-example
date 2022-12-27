@@ -1,22 +1,20 @@
+import type { FC } from 'react'
+import type IProduct from '~interfaces/i-product'
 import ButtonToCart from './button-to-cart'
-import styles from './styles.module.scss'
 import ButtonToFavorite from './button-to-favorite'
+import styles from './styles.module.scss'
 
 interface ICardFooter {
-
+	product: IProduct
 }
 
-const CardFooter = ({productId}) => {
-
-
-  return (
-    <div className={styles.cardFooter}>
-      <ButtonToCart productId={productId} />
-      {/* <FavoriteIcon className={styles.favorite} /> */}
-      <ButtonToFavorite />
-    </div>
-  )
-
+const CardFooter: FC<ICardFooter> = ({ product }) => {
+	return (
+		<div className={styles.cardFooter}>
+			<ButtonToCart product={product} />
+			<ButtonToFavorite />
+		</div>
+	)
 }
 
 export default CardFooter
