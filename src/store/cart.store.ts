@@ -49,4 +49,12 @@ subscribe(cartStore, () => {
 
 const useCartStore = () => useSnapshot(cartStore)
 
+export const getIsInCart = (id: number) => {
+	const {
+		cart: { products },
+	} = cartStore
+
+	return products?.some(p => p.id === id) || false
+}
+
 export default useCartStore

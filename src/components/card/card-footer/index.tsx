@@ -12,7 +12,7 @@ const CardFooter: FC<ICardFooter> = ({ product }) => {
 	return (
 		<div className={styles.cardFooter}>
 			<ButtonToCart product={product} />
-			<ButtonToFavorite />
+			<ButtonToFavorite product={product} />
 		</div>
 	)
 }

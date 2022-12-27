@@ -19,6 +19,7 @@
       "~assets/*": ["./public/assets/*"],
       "~constants/*": ["./src/constants/*"],
       "~components/*": ["./src/components/*"],
+      "~hooks/*": ["./src/hooks/*"],
       "~store/*": ["./src/store/*"],
       "~interfaces/*": ["./src/interfaces/*"],
       "~utils/*": ["./src/utils/*"]

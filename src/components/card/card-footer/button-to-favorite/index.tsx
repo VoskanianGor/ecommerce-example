@@ -1,15 +1,16 @@
 import classNames from 'classnames'
-import { useState } from 'react'
+import type { FC } from 'react'
 import FavoriteIcon from '~assets/icons/favorite.svg'
-import FavoriteIcon2 from '~assets/icons/fav.svg'
+import type IProduct from '~interfaces/i-product'
+import useToFavorite from '~hooks/use-to-favorite'
 import styles from './styles.module.scss'
 
-const ButtonToFavorite = ({ _isFavorite, onClick }) => {
-	const [isFavorite, setIsFavorite] = useState(_isFavorite)
+interface IButtonToFavorite {
+	product: IProduct
+}
 
-	const handleClick = () => {
-		setIsFavorite(!isFavorite)
-	}
+const ButtonToFavorite: FC<IButtonToFavorite> = ({ product }) => {
+	const { isFavorite, handleClick } = useToFavorite(product.id, product)
 
 	return (
 		<button className={styles.button} onClick={handleClick} type="button">
