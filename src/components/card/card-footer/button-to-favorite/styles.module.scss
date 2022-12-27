@@ -3,7 +3,6 @@
 
 .button {
 	@extend %flex-center;
-
 	width: 40px;
 	height: 40px;
 }
@@ -16,36 +15,20 @@
 	}
 
 	&:hover > * {
+		stroke: $c-black;
+
+		&:last-child {
+			stroke: none;
+			fill: $c-black;
+		}
+	}
+
+	&.favorite > * {
 		stroke: $c-red;
 
 		&:last-child {
 			stroke: none;
 			fill: $c-red;
 		}
-	}
-
-	&.favorite {
-		animation: 1.5s ease 0s beat;
-
-		& > * {
-			stroke: $c-red;
-
-			&:last-child {
-				stroke: none;
-				fill: $c-red;
-			}
-		}
-	}
-}
-
-@keyframes beat {
-	0%,
-	50%,
-	100% {
-		transform: scale(1, 1);
-	}
-	30%,
-	80% {
-		transform: scale(0.92, 0.92);
 	}
 }
