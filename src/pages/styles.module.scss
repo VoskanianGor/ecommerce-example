@@ -1,0 +1,17 @@
+.section {
+  padding: 30px 0;
+}
+
+.cards {
+  --card-width: 332px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+  gap: 30px;
+
+  @media (max-width: 728px) {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    width: min(100%, var(--card-width));
+  }
+}
