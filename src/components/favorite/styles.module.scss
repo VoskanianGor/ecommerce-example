@@ -21,6 +21,11 @@
 		width: 30vw;
 		height: 60vh;
 		border-radius: 15px;
+
+		@media screen and (max-width: 465px) {
+			width: 90vw;
+			height: 70vh;
+		}
 	}
 }
 

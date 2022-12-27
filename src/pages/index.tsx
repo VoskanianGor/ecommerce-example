@@ -13,7 +13,6 @@ interface IHome {
 	products: IProduct[]
 }
 
-
 // This function gets called at build time because this data is static
 // But for dynamic data, i would use getServerSideProps
 export async function getStaticProps() {
