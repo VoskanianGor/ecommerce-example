@@ -1,0 +1,16 @@
+@import '/src/styles/vars';
+@import '/src/styles/temp';
+
+.badge {
+  @extend %flex-center;
+	position: relative;
+	color: $c-black;
+	font-weight: 700;
+	isolation: isolate;
+	font-size: 15px;
+	line-height: 24px;
+	background-color: $bgc-discount;
+	clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0% 100%);
+	width: 71px;
+	height: 24px;
+}
