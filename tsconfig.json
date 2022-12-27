@@ -18,6 +18,7 @@
     "paths": {
       "~assets/*": ["./public/assets/*"],
       "~components/*": ["./src/components/*"],
+      "~store/*": ["./src/store/*"],
       "~interfaces/*": ["./src/interfaces/*"],
       "~utils/*": ["./src/utils/*"]
     }
