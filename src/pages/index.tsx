@@ -1,8 +1,11 @@
 import classNames from 'classnames'
 import { NextPage } from 'next'
 import Head from 'next/head'
+import Banner from '~components/banner'
+import BannerCard from '~components/banner-card'
 import Card from '~components/card'
 import IProduct from '~interfaces/i-product'
+import bannerData from './banner-data'
 import styles from './styles.module.scss'
 
 interface IHome {
@@ -34,6 +37,10 @@ const Home: NextPage<IHome> = ({ products }) => {
 			</Head>
 			<section className={classNames('container', styles.section)}>
 				<div className={styles.cards}>
+					<BannerCard
+						bannerData={bannerData}
+						title="Всё для комфортной работы"
+					/>
 					{products.map(product => (
 						<Card key={product.id} {...product} />
 					))}
